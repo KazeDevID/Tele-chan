@@ -1,0 +1,26 @@
+{
+    "name": "Tele-chan",
+    "description": "A telegram bot written in python to fetch sfw and NSFW anime images",
+    "keywords": [
+        "bot",
+        "python",
+        "waifu",
+        "neko",
+        "anime",
+        "telegram-bot",
+        "anime-bot",
+        "telegram"
+    ],
+    "website": "https://github.com/KazeDevID/Tele-chan#readme",
+    "repository": "https://github.com/KazeDevID/Tele-chan.git",
+    "env": {
+        "TOKEN": {
+            "description": "Token of your bot | Get from @BotFather (https://telegram.me/BotFather)"
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ]
+}
