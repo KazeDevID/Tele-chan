@@ -1,0 +1,26 @@
+name: Telegram bot ⚡
+on:
+  push:
+    branches:
+      - mai
+    workflow_dispatch:
+  schedule:
+    - cron: "0 */6 * * *"
+jobs:
+  Learning-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python environment
+        uses: actions/setup-python@v2
+
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip3 install -r requirements.txt
+
+      - name: Execute Python script
+        run: python3 app.py
+        
