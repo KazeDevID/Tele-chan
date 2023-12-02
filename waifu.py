@@ -149,20 +149,11 @@ def help(message):
     /neko
     /shinobu
     /megumin
-    /avatar
 
     NSFW Commands :
     /trap
     /blowjob
     /lewd
-    /tits
-    /solo
-    /ero
-    /hentai
-    /bj
-    /kitesune
-    /eroKitesune
-    /pussy
 
     Other Commands :
     /ping
@@ -189,7 +180,7 @@ def eroneko(message):
     url = get_eronekourl()
     bot.send_photo(message.chat.id, url)
 
-@bot.message_handler(commands = ['avatar'])
+@bot.mesmands = ['avatar'])
 @bot.message_handler(regexp=r'avatar')
 def avatar(message):
     url = get_avatarurl()
