@@ -2,7 +2,7 @@ name: Telegram bot ⚡
 on:
   push:
     branches:
-      - mai
+      - main
     workflow_dispatch:
   schedule:
     - cron: "0 */6 * * *"
@@ -22,5 +22,5 @@ jobs:
           pip3 install -r requirements.txt
 
       - name: Execute Python script
-        run: python3 app.py
+        run: python3 waifu.py
         
