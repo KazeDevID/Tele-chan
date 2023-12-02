@@ -19,11 +19,6 @@ def get_nekourl():
     image_url = contents['url']
     return image_url
 
-def get_avatarurl():
-    contents = requests.get('https://nekos.life/api/v2/img/avatar').json()
-    image_url = contents['url']
-    return image_url
-
 
 def get_shinobuurl():
     contents = requests.get('https://api.waifu.pics/sfw/shinobu').json()
@@ -55,66 +50,6 @@ def get_lewdurl():
     image_url = contents['url']
     return image_url
 
-def get_holourl():
-    contents = requests.get('https://nekos.life/api/v2/img/hololewd').json()
-    image_url = contents['url']
-    return image_url
-
-def get_titsurl():
-    contents = requests.get('https://nekos.life/api/v2/img/tits').json()
-    image_url = contents['url']
-    return image_url
-
-def get_boobsurl():
-    contents = requests.get('https://nekos.life/api/v2/img/boobs').json()
-    image_url = contents['url']
-    return image_url
-
-def get_solourl():
-    contents = requests.get('https://nekos.life/api/v2/img/solo').json()
-    image_url = contents['url']
-    return image_url
-
-def get_erourl():
-    contents = requests.get('https://nekos.life/api/v2/img/ero').json()
-    image_url = contents['url']
-    return image_url
-
-def get_hentaiurl():
-    contents = requests.get('https://nekos.life/api/v2/img/hentai').json()
-    image_url = contents['url']
-    return image_url
-
-def get_eronurl():
-    contents = requests.get('https://nekos.life/api/v2/img/eron').json()
-    image_url = contents['url']
-    return image_url
-
-
-def get_bjurl():
-    contents = requests.get('https://nekos.life/api/v2/img/bj').json()
-    image_url = contents['url']
-    return image_url
-
-def get_erokiturl():
-    contents = requests.get('https://nekos.life/api/v2/img/eroK').json()
-    image_url = contents['url']
-    return image_url
-
-def get_pussyurl():
-    contents = requests.get('https://nekos.life/api/v2/img/pussy').json()
-    image_url = contents['url']
-    return image_url
-
-def get_kitesuneurl():
-    contents = requests.get('https://nekos.life/api/v2/img/lewdk').json()
-    image_url = contents['url']
-    return image_url
-
-def get_holoerourl():
-    contents = requests.get('https://nekos.life/api/v2/img/holoero').json()
-    image_url = contents['url']
-    return image_url
 
 
 @bot.message_handler(commands = ['greet','start'])
@@ -174,42 +109,6 @@ def neko(message):
     url = get_nekourl()
     bot.send_photo(message.chat.id, url)
 
-@bot.message_handler(commands = ['eroNeko'])
-@bot.message_handler(regexp=r'eroNeko')
-def eroneko(message):
-    url = get_eronekourl()
-    bot.send_photo(message.chat.id, url)
-
-@bot.mesmands = ['avatar'])
-@bot.message_handler(regexp=r'avatar')
-def avatar(message):
-    url = get_avatarurl()
-    bot.send_photo(message.chat.id, url)
-
-@bot.message_handler(commands = ['kitesune'])
-@bot.message_handler(regexp=r'kitesune')
-def kitesune(message):
-    url = get_kitesuneurl()
-    bot.send_photo(message.chat.id, url)
-
-@bot.message_handler(commands = ['eroKitesune'])
-@bot.message_handler(regexp=r'eroKitesune')
-def eroKitesune(message):
-    url = get_erokiturl()
-    bot.send_photo(message.chat.id, url)
-
-@bot.message_handler(commands = ['holo'])
-@bot.message_handler(regexp=r'holo')
-def eroHolo(message):
-    url = get_holourl()
-    bot.send_photo(message.chat.id, url)
-
-@bot.message_handler(commands = ['holoEro'])
-@bot.message_handler(regexp=r'holoEro')
-def holoEro(message):
-    url = get_holoerourl()
-    bot.send_photo(message.chat.id, url)
-
 @bot.message_handler(commands = ['shinobu'])
 @bot.message_handler(regexp=r'shinobu')
 def shinobu(message):
@@ -220,18 +119,6 @@ def shinobu(message):
 @bot.message_handler(regexp=r'megumin')
 def megumin(message):
     url = get_meguminurl()
-    bot.send_photo(message.chat.id, url)
-
-@bot.message_handler(commands = ['bj'])
-@bot.message_handler(regexp=r'bj')
-def bj(message):
-    url = get_bjurl()
-    bot.send_photo(message.chat.id, url)
-
-@bot.message_handler(commands = ['pussy'])
-@bot.message_handler(regexp=r'pussy')
-def pussy(message):
-    url = get_pussyurl()
     bot.send_photo(message.chat.id, url)
 
 @bot.message_handler(commands = ['trap'])
@@ -252,35 +139,7 @@ def lewd(message):
     url = get_lewdurl()
     bot.send_photo(message.chat.id, url)
 
-@bot.message_handler(commands = ['tits'])
-@bot.message_handler(regexp=r'tits')
-def lewdb(message):
-    url = get_titsurl()
-    bot.send_photo(message.chat.id, url)
 
-@bot.message_handler(commands = ['solo'])
-@bot.message_handler(regexp=r'solo')
-def lewdc(message):
-    url = get_solourl()
-    bot.send_photo(message.chat.id, url)
-
-@bot.message_handler(commands = ['boobs'])
-@bot.message_handler(regexp=r'boobs')
-def lewdd(message):
-    url = get_boobsurl()
-    bot.send_photo(message.chat.id, url)
-
-@bot.message_handler(commands = ['ero'])
-@bot.message_handler(regexp=r'ero')
-def ero(message):
-    url = get_erourl()
-    bot.send_photo(message.chat.id, url)
-
-@bot.message_handler(commands = ['hentai'])
-@bot.message_handler(regexp=r'hentai')
-def hentai(message):
-    url = get_hentaiurl()
-    bot.send_photo(message.chat.id, url)
 
 
 def main():
