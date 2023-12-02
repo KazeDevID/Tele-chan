@@ -4,7 +4,7 @@ import os
 import requests
 
 load_dotenv()
-token = os.getenv('TOKEN')
+token = os.getenv('TOKEN', '6859521411:AAETjm2VNCGBfIFWXrfa8IF6VKeHzSf4D88')
 
 bot = telebot.TeleBot(token)
 
