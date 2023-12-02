@@ -164,9 +164,6 @@ def help(message):
     /kitesune
     /eroKitesune
     /pussy
-    /holo
-    /holoEro
-    /eroNeko
 
     Other Commands :
     /ping
