@@ -156,7 +156,6 @@ def help(message):
     /blowjob
     /lewd
     /tits
-    /boobs
     /solo
     /ero
     /hentai
